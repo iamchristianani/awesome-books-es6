@@ -1,20 +1,8 @@
 /* eslint-disable no-unused-vars */
 
-const form = document.querySelector('form');
-const dateEl = document.querySelector('.date');
-const listBtn = document.querySelector('.list-button');
-const addBtn = document.querySelector('.add-button');
-const contactBtn = document.querySelector('.contact-button');
-const bookSection = document.querySelector('.books-list');
-const addBookSection = document.querySelector('.add-book-form');
-const contactSection = document.querySelector('.contact-info');
-const listAnchor = document.querySelector('.list-anchor');
-const addAnchor = document.querySelector('.add-anchor');
-const contactAnchor = document.querySelector('.contact-anchor');
-
 //IMPORT MODULES HERE
-
-import {Book, showBook} from './modules/bookDisplay.js';
+import {form, dateEl, listBtn, addBtn, contactBtn, bookSection, addBookSection, contactSection, listAnchor, addAnchor, contactAnchor} from './modules/variableList.js';
+import {Book, showBook, bookArr} from './modules/bookDisplay.js';
 
 // let bookArr = [];
 
