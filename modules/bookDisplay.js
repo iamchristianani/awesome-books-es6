@@ -22,25 +22,6 @@ class Book {
       title.value = '';
       author.value = '';
     })
-    // for (let i = 0; i < bookArr.length; i += 1) {
-    //   const oneBook = document.createElement('div');
-    //   oneBook.className = 'book';
-    //   oneBook.innerHTML = `
-    //     <p class="title">"${bookArr[i].title}" by ${bookArr[i].author}</p>
-    //     <button class="remove" id="remove-btn">Remove</button>
-    //   `;
-    //   bookInfo.appendChild(oneBook);
-    //   title.value = '';
-    //   author.value = '';
-    // }
-    // const projectButtonList = document.querySelectorAll('#project-buttons');
-
-    // projectButtonList.forEach((button) => {
-    //   button.addEventListener('click', () => {
-    //     const projectId = parseInt(button.dataset.id, 10) - 1;
-    //     openModal(projectId);
-    //   });
-    // });
 
     const bookRemoveBtn = document.querySelectorAll('#remove-btn');
     bookRemoveBtn.forEach((button) => {
@@ -50,15 +31,8 @@ class Book {
           return object.id === dataSet;
         });
         Book.removeBook(buttonId);
-        // console.log(buttonId);
       });
     })
-
-    // console.log(bookArr);
-    // bookRemoveBtn.addEventListener('click', () => {
-    //   //Book.removeBook(bookArr.id);
-    //   console.log(book.id);
-    // });
   }
 
   static addBook() {
@@ -92,4 +66,4 @@ const showBook = () => {
 
 
 
-export {Book, showBook, bookArr};
+export {Book, showBook};
