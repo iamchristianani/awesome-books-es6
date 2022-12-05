@@ -3,6 +3,7 @@
 //IMPORT MODULES HERE
 import {form, dateEl, listBtn, addBtn, contactBtn, bookSection, addBookSection, contactSection, listAnchor, addAnchor, contactAnchor} from './modules/variableList.js';
 import {Book, showBook, bookArr} from './modules/bookDisplay.js';
+import {showDate} from './modules/dateDisplay.js';
 
 // let bookArr = [];
 
@@ -64,8 +65,7 @@ window.addEventListener('load', () => {
 
 // SPA Navigation
 window.setInterval(() => {
-  const date = new Date();
-  dateEl.innerHTML = date;
+  showDate();
 }, 1000);
 
 listBtn.addEventListener('click', () => {
