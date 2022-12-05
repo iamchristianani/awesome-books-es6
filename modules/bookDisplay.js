@@ -1,6 +1,7 @@
 import { bookInfo, title, author } from './variableList.js';
 
 let bookArr = [];
+let count = 0;
 
 const bookDisplay = () => {
   bookInfo.innerHTML = '';
@@ -29,15 +30,18 @@ const bookDisplay = () => {
 
 const addBook = () => {
   const eachBook = {};
-  eachBook.id = bookArr.length;
+  eachBook.id = count;
   eachBook.title = title.value;
   eachBook.author = author.value;
 
   bookArr.push(eachBook);
+  count++;
   bookDisplay();
 
   const jsonData = JSON.stringify(bookArr);
+  const countJsonData = JSON.stringify(count);
   localStorage.setItem('form', jsonData);
+  localStorage.setItem('count', countJsonData);
 };
 
 const removeBook = (index) => {
@@ -49,8 +53,15 @@ const removeBook = (index) => {
 
 const showBook = () => {
   const getJsonData = localStorage.getItem('form');
+  const getCountData = localStorage.getItem('count');
+  
   if (getJsonData) {
     bookArr = JSON.parse(getJsonData);
+  }
+  if (getCountData) {
+    count = JSON.parse(getCountData);
+  } else {
+    count = 0;
   }
   bookDisplay();
 };
