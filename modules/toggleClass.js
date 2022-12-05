@@ -1,4 +1,6 @@
-import {bookSection, addBookSection, contactSection, listAnchor, addAnchor, contactAnchor} from './variableList.js';
+import {
+  bookSection, addBookSection, contactSection, listAnchor, addAnchor, contactAnchor,
+} from './variableList.js';
 
 const showBookList = () => {
   bookSection.classList.add('active');
@@ -11,7 +13,7 @@ const showBookList = () => {
   listAnchor.classList.add('list-active');
   addAnchor.classList.remove('list-active');
   contactAnchor.classList.remove('list-active');
-}
+};
 
 const showAddBook = () => {
   bookSection.classList.remove('active');
@@ -24,7 +26,7 @@ const showAddBook = () => {
   listAnchor.classList.remove('list-active');
   addAnchor.classList.add('list-active');
   contactAnchor.classList.remove('list-active');
-}
+};
 
 const showRemoveBook = () => {
   bookSection.classList.add('hidden');
@@ -37,6 +39,6 @@ const showRemoveBook = () => {
   listAnchor.classList.remove('list-active');
   addAnchor.classList.remove('list-active');
   contactAnchor.classList.add('list-active');
-}
+};
 
-export {showBookList, showAddBook, showRemoveBook};
+export { showBookList, showAddBook, showRemoveBook };

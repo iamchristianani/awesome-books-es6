@@ -1,9 +1,7 @@
-import { dateEl } from "./variableList.js";
-import { DateTime } from "./luxon.js";
+import { dateEl } from './variableList.js';
+import { DateTime } from './luxon.js';
 
-const showDate = () => {
+export default () => {
   const now = DateTime.now();
-  dateEl.innerHTML =  now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
-}
-
-export {showDate};
+  dateEl.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+};
