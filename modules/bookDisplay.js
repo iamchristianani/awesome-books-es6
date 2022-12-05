@@ -35,7 +35,7 @@ const addBook = () => {
   eachBook.author = author.value;
 
   bookArr.push(eachBook);
-  count++;
+  count += 1;
   bookDisplay();
 
   const jsonData = JSON.stringify(bookArr);
@@ -54,7 +54,7 @@ const removeBook = (index) => {
 const showBook = () => {
   const getJsonData = localStorage.getItem('form');
   const getCountData = localStorage.getItem('count');
-  
+
   if (getJsonData) {
     bookArr = JSON.parse(getJsonData);
   }
